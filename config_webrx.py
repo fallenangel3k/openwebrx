@@ -40,7 +40,7 @@ version = 2
 
 # ==== Server settings ====
 web_port = 8073
-max_clients = 20
+max_clients = 5
 
 # ==== Web GUI configuration ====
 receiver_name = "[Callsign]"
@@ -149,97 +149,6 @@ sdrs = {
                 "samp_rate": 1400000,
                 "start_freq": 145725000,
                 "start_mod": "nfm",
-            },
-        },
-    },
-    "airspy": {
-        "name": "Airspy HF+",
-        "type": "airspyhf",
-        "ppm": 0,
-        "rf_gain": "auto",
-        "profiles": {
-            "20m": {
-                "name": "20m",
-                "center_freq": 14150000,
-                "samp_rate": 384000,
-                "start_freq": 14070000,
-                "start_mod": "usb",
-            },
-            "30m": {
-                "name": "30m",
-                "center_freq": 10125000,
-                "samp_rate": 192000,
-                "start_freq": 10142000,
-                "start_mod": "usb",
-            },
-            "40m": {
-                "name": "40m",
-                "center_freq": 7100000,
-                "samp_rate": 256000,
-                "start_freq": 7070000,
-                "start_mod": "lsb",
-            },
-            "80m": {
-                "name": "80m",
-                "center_freq": 3650000,
-                "samp_rate": 384000,
-                "start_freq": 3570000,
-                "start_mod": "lsb",
-            },
-            "49m": {
-                "name": "49m Broadcast",
-                "center_freq": 6050000,
-                "samp_rate": 384000,
-                "start_freq": 6070000,
-                "start_mod": "am",
-            },
-        },
-    },
-    "sdrplay": {
-        "name": "SDRPlay RSP2",
-        "type": "sdrplay",
-        "ppm": 0,
-        "antenna": "Antenna A",
-        "profiles": {
-            "20m": {
-                "name": "20m",
-                "center_freq": 14150000,
-                "rf_gain": 0,
-                "samp_rate": 500000,
-                "start_freq": 14070000,
-                "start_mod": "usb",
-            },
-            "30m": {
-                "name": "30m",
-                "center_freq": 10125000,
-                "rf_gain": 0,
-                "samp_rate": 250000,
-                "start_freq": 10142000,
-                "start_mod": "usb",
-            },
-            "40m": {
-                "name": "40m",
-                "center_freq": 7100000,
-                "rf_gain": 0,
-                "samp_rate": 500000,
-                "start_freq": 7070000,
-                "start_mod": "lsb",
-            },
-            "80m": {
-                "name": "80m",
-                "center_freq": 3650000,
-                "rf_gain": 0,
-                "samp_rate": 500000,
-                "start_freq": 3570000,
-                "start_mod": "lsb",
-            },
-            "49m": {
-                "name": "49m Broadcast",
-                "center_freq": 6000000,
-                "rf_gain": 0,
-                "samp_rate": 500000,
-                "start_freq": 6070000,
-                "start_mod": "am",
             },
         },
     },
