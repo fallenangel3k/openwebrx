@@ -31,7 +31,7 @@ sdrhu_public_listing = False
 server_hostname = "localhost"
 
 # ==== DSP/RX settings ====
-fft_fps = 5					# *** reduce if audio underruns while CPU usage is 100%
+fft_fps = 9					# *** reduce if audio underruns while CPU usage is 100%
 fft_size = 1024  				# *** power of 2 reduce if audio underruns while CPU usage is 100%
 fft_voverlap_factor = (
     0 					# >0 multiple FFTs used for diagram lines
@@ -52,57 +52,57 @@ sdrs = {
         "profiles": {
            "FM1": {
                 "name": "FM1",
-                "center_freq": 8930000,
-                "rf_gain": 10,
-                "samp_rate": 900001,
+                "center_freq": 89300000,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
                 "start_freq": 8880000,
                 "start_mod": "FM",
             },
             "NOAA": {
-                "name": "NOAA Weather",
-                "center_freq": 162475000,
-                "rf_gain": 30,
-                "samp_rate": 900001,
-                "start_freq": 162475000,
+                "name": "MKK",
+                "center_freq": 86900000,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
+                "start_freq": 86995000,
                 "start_mod": "nfm",
             },
             "2m": {
                 "name": "2m Packet",
                 "center_freq": 144390000,
-                "rf_gain": 30,
-                "samp_rate": 900001,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
                 "start_freq": 144390000,
                 "start_mod": "nfm",
             },
 			  "70cm": {
                 "name": "70cm 440",
                 "center_freq": 438800000,
-                "rf_gain": 30,
-                "samp_rate": 900001,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
                 "start_freq": 439275000,
                 "start_mod": "nfm",
             },
             "20m": {
                 "name": "20m",
                 "center_freq": 14150000,
-                "rf_gain": 10,
-                "samp_rate": 900001,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
                 "start_freq": 14070000,
                 "start_mod": "usb",
             },
             "30m": {
                 "name": "30m",
                 "center_freq": 10125000,
-                "rf_gain": 10,
-                "samp_rate": 900001,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
                 "start_freq": 10142000,
                 "start_mod": "usb",
             },
             "40m": {
                 "name": "40m",
                 "center_freq": 7100000,
-                "rf_gain": 10,
-                "samp_rate": 9000001,
+                "rf_gain": 47,
+                "samp_rate": 1400000,
                 "start_freq": 7070000,
                 "start_mod": "usb",
             },
@@ -115,7 +115,7 @@ waterfall_colors = [0x000000FF, 0x0000FFFF, 0x00FFFFFF, 0x00FF00FF, 0xFFFF00FF, 
 waterfall_min_level = -88  # in dB
 waterfall_max_level = -20
 waterfall_auto_level_margin = {"min": 5, "max": 40}
-csdr_dynamic_bufsize = False  			# This allows you to change the buffering mode of csdr
+csdr_dynamic_bufsize = True  			# This allows you to change the buffering mode of csdr
 csdr_print_bufsizes = False  			# This prints the buffer sizes used for csdr processes
 csdr_through = False  				# True prints how much data is going into the DSP chains
 nmux_memory = 50  				# (MB) nmux circular buffer size
@@ -133,15 +133,15 @@ services_decoders = ["ft8", "ft4", "wspr", "jt65", "jt9", "packet"]
 # === aprs igate settings ===
 # if you want to share your APRS decodes with the aprs network, configure these settings accordingly
 aprs_callsign = "N3FTU"
-aprs_igate_enabled = True
+aprs_igate_enabled = False
 aprs_igate_server = "noam.aprs2.net"		# Worldwide Servers http://aprs2.net
 aprs_igate_password = "xxxxx"			# Passwrd generator http://www.aprs-is.net/Connecting.aspx
 aprs_igate_beacon = False
 aprs_symbols_path = "/opt/aprs-symbols/png"
 
 # === PSK Reporter setting ===
-pskreporter_enabled = True
+pskreporter_enabled = False
 pskreporter_callsign = "N3FTU"
 
 # === Web admin settings ===
-webadmin_enabled = False
+webadmin_enabled = True
