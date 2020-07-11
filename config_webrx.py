@@ -8,8 +8,8 @@ version = 2
 # *** reduce if audio underruns while CPU usage is 100%
 
 # ==== Server settings ====
-web_port = 8073							
-max_clients = 2					# *** reduce if audio underruns while CPU usage is 100%
+web_port = 80						
+max_clients = 2	# *** reduce if audio underruns while CPU usage is 100%
 
 # ==== Web GUI configuration ====
 receiver_name = "N3FTU"
