@@ -31,10 +31,10 @@ sdrhu_public_listing = False
 server_hostname = "localhost"
 
 # ==== DSP/RX settings ====
-fft_fps = 9					# *** reduce if audio underruns while CPU usage is 100%
-fft_size = 4096  				# *** power of 2 reduce if audio underruns while CPU usage is 100%
+fft_fps = 5					# *** reduce if audio underruns while CPU usage is 100%
+fft_size = 1024  				# *** power of 2 reduce if audio underruns while CPU usage is 100%
 fft_voverlap_factor = (
-    0.3  					# >0 multiple FFTs used for diagram lines
+    0 					# >0 multiple FFTs used for diagram lines
 )						# *** reduce if audio underruns while CPU usage is 100%
 audio_compression = "adpcm"  			# valid values: "adpcm", "none"
 fft_compression = "adpcm"  			# valid values: "adpcm", "none"
@@ -48,13 +48,21 @@ sdrs = {
     "rtlsdr": {
         "name": "RTL-SDR",
         "type": "rtl_sdr",
-        "ppm": 0,
+        "ppm": -78,
         "profiles": {
+           "FM1": {
+                "name": "FM1",
+                "center_freq": 8930000,
+                "rf_gain": 10,
+                "samp_rate": 900001,
+                "start_freq": 8880000,
+                "start_mod": "FM",
+            },
             "NOAA": {
                 "name": "NOAA Weather",
                 "center_freq": 162475000,
                 "rf_gain": 30,
-                "samp_rate": 2000000,
+                "samp_rate": 900001,
                 "start_freq": 162475000,
                 "start_mod": "nfm",
             },
@@ -62,7 +70,7 @@ sdrs = {
                 "name": "2m Packet",
                 "center_freq": 144390000,
                 "rf_gain": 30,
-                "samp_rate": 2000000,
+                "samp_rate": 900001,
                 "start_freq": 144390000,
                 "start_mod": "nfm",
             },
@@ -70,23 +78,15 @@ sdrs = {
                 "name": "70cm 440",
                 "center_freq": 438800000,
                 "rf_gain": 30,
-                "samp_rate": 2000000,
+                "samp_rate": 900001,
                 "start_freq": 439275000,
                 "start_mod": "nfm",
-            },
-            "FM1": {
-                "name": "FM1",
-                "center_freq": 9000000,
-                "rf_gain": 10,
-                "samp_rate": 2000000,
-                "start_freq": 9000000,
-                "start_mod": "FM",
             },
             "20m": {
                 "name": "20m",
                 "center_freq": 14150000,
                 "rf_gain": 10,
-                "samp_rate": 2000000,
+                "samp_rate": 900001,
                 "start_freq": 14070000,
                 "start_mod": "usb",
             },
@@ -94,7 +94,7 @@ sdrs = {
                 "name": "30m",
                 "center_freq": 10125000,
                 "rf_gain": 10,
-                "samp_rate": 2000000,
+                "samp_rate": 900001,
                 "start_freq": 10142000,
                 "start_mod": "usb",
             },
@@ -102,7 +102,7 @@ sdrs = {
                 "name": "40m",
                 "center_freq": 7100000,
                 "rf_gain": 10,
-                "samp_rate": 2000000,
+                "samp_rate": 9000001,
                 "start_freq": 7070000,
                 "start_mod": "usb",
             },
